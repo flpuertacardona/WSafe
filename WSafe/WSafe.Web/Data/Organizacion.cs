@@ -27,7 +27,7 @@ namespace WSafe.Web.Data
         [MaxLength(50, ErrorMessage = "La longitud máxima del campo {0}, es {1}")]
         public string ARL { get; set; }
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        public int NivelRiesgo { get; set; }
+        public string NivelRiesgo { get; set; }
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [MaxLength(12, ErrorMessage = "La longitud máxima del campo {0}, es {1}")]
         [Display(Name = "Documento Representante Legal")]
