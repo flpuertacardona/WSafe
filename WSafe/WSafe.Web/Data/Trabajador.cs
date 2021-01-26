@@ -47,7 +47,7 @@ namespace WSafe.Web.Data
         public string ARL { get; set; }
         [MaxLength(50,ErrorMessage ="La longitud máxima del campo {0}, es {1}")]
         public string Direccion { get; set; }
-        [MaxLength(50,ErrorMessage ="La longitud máxima del campo {0}, es {1}")]
+        [MaxLength(25,ErrorMessage ="La longitud máxima del campo {0}, es {1}")]
         public string Telefonos { get; set; }
         public bool AltoRiesgo { get; set; }
         [MaxLength(50,ErrorMessage ="La longitud máxima del campo {0}, es {1}")]
