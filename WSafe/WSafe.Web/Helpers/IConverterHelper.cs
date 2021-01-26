@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace WSafe.Web.Helpers
+{
+    public interface IConverterHelper
+    {
+        Task<Property> ToPropertyAsync(PropertyViewModel model, bool isNew);
+
+        PropertyViewModel ToPropertyViewModel(Property property);
+
+        Task<Contract> ToContractAsync(ContractViewModel model, bool isNew);
+
+        ContractViewModel ToContractViewModel(Contract contract);
+    }
+}

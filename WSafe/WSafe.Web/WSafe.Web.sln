@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSafe.Web", "WSafe.Web.csproj", "{36F87721-265C-41C0-B3AB-2BBF879B5D04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36F87721-265C-41C0-B3AB-2BBF879B5D04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36F87721-265C-41C0-B3AB-2BBF879B5D04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36F87721-265C-41C0-B3AB-2BBF879B5D04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36F87721-265C-41C0-B3AB-2BBF879B5D04}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65F25558-2399-4CDE-9D34-8E3BD69D8BD4}
+	EndGlobalSection
+EndGlobal
