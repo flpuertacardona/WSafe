@@ -15,7 +15,7 @@ namespace WSafe.Web.Data
         public Actividad Actividad { get; set; }
         public Tarea Tarea { get; set; }
         public bool Rutinaria { get; set; }
-        [Required(ErrorMessage = "El campo {0} es obligatotio")]
+        [Required(ErrorMessage = "El campo {0} es requerido")]
         public string Descripcion { get; set; }
         public string ClasePeligro { get; set; }
         public string TipoPelogro { get; set; }
