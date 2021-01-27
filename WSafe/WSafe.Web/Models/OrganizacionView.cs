@@ -14,6 +14,8 @@ namespace WSafe.Web.Models
         public IEnumerable<SelectListItem> Procesos { get; set; }
         public int CargoID { get; set; }
         public IEnumerable<SelectListItem> Cargos { get; set; }
+        public int LugarID { get; set; }
+        public IEnumerable<SelectListItem> Lugares { get; set; }
 
     }
 }

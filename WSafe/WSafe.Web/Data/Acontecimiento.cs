@@ -30,8 +30,8 @@ namespace WSafe.Web.Data
         public string Recomendaciones { get; set; }
         public string ControlAdmon { get; set; }
         public string ControlIngria { get; set; }
-        public string DocumentoIdentificaEvento { get; set; }
-        public string DocumentoReporteEvento { get; set; }
+        public Trabajador IdentificaEvento { get; set; }
+        public Trabajador ReporteEvento { get; set; }
     }
 
 }

@@ -70,6 +70,7 @@ namespace WSafe.Web.Data
         public ICollection<Centro> Centros { get; set; }
         public ICollection<Proceso> Procesos { get; set; }
         public ICollection<Cargo> Cargos { get; set; }
+        public ICollection<Lugar> Lugares { get; set; }
 
     }
 }

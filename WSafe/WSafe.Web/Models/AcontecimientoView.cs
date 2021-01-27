@@ -23,5 +23,7 @@ namespace WSafe.Web.Models
         public IEnumerable<SelectListItem> Cargos { get; set; }
         public int ImagenActoID { get; set; }
         public IEnumerable<SelectListItem> Imagenes { get; set; }
+        public int IdentificaEventoID { get; set; }
+        public int ReportaEventoID { get; set; }
     }
 }

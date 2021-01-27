@@ -5,6 +5,35 @@
 
 <script>
 
+    function condicionesInseguras(){
+        var condicionInsegura = [
+            {id: 1, name: "Orden y limpieza"},
+            {id: 2, name: "Superficies defectuosas"},
+            {id: 3, name: "Herramientas"},
+            {id: 4, name: "Derrames"},
+            {id: 5, name: "Instalaciones electricas"},
+            {id: 6, name: "Instalaciones locativas"},
+            {id: 7, name: "Vehiculos"},
+            {id: 8, name: "Equipos"},
+            {id: 9, name: "Sustancias quimicas"},
+            {id: 10, name: "Otros"}
+        ]
+
+    }
+
+    function actosInseguros(){
+        var actoInseguro = [
+            {id: 1, name: "Distracción"},
+            {id: 2, name: "Prisa"},
+            {id: 3, name: "Cansancio"},
+            {id: 4, name: "Uso EPP"},
+            {id: 5, name: "Exceso confianza"},
+            {id: 6, name: "Indiferencia"},
+            {id: 7, name: "Comportamiento ambiente"}
+        ]
+
+    }
+
     function calcularRiesgos(modelo){
         foreach(var r in modelo)
         {
@@ -75,6 +104,7 @@
             {id: 1, name: "Toda la Organización" },
             {id: 2, name: "Sede" },
             {id: 3, name: "Proceso" }
+            {id: 4, name: "Lugar" }
         ]
 
     }

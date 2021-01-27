@@ -9,7 +9,7 @@ namespace WSafe.Web.Data
     public class ImagenActo
     {
         public int ID { get; set; }
-        [Display(Name = "Image")]
+        [Display(Name = "Imagen")]
         public string ImageUrl { get; set; }
 
         // TODO: Change the path when publish
