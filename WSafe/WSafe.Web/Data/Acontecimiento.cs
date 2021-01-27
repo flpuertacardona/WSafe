@@ -28,6 +28,8 @@ namespace WSafe.Web.Data
         public string FactoresPersonales { get; set; }
         public string FactoresTrabajo { get; set; }
         public string Recomendaciones { get; set; }
+        public string ControlAdmon { get; set; }
+        public string ControlIngria { get; set; }
         public string DocumentoIdentificaEvento { get; set; }
         public string DocumentoReporteEvento { get; set; }
     }
