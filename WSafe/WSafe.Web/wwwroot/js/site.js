@@ -8,7 +8,7 @@
     function calcularRiesgos(modelo){
         foreach(var r in modelo)
         {
-            for (var i = 0; i < 19; {
+            for (var i = 0; i < 19 {
                 var (r+"i") = 0
             }
 

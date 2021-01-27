@@ -7,9 +7,9 @@ namespace WSafe.Web.Models
 {
     public class SedeView : Sede
     {
-        [Required(ErrorMessage = "The field {0} is mandatory.")]
-        [Display(Name = "Lessee")]
-        [Range(1, int.MaxValue, ErrorMessage = "You must select a lessee.")]
+        [Required(ErrorMessage = "El campo {0} es requerido.")]
+        [Display(Name = "Trabajador")]
+        [Range(1, int.MaxValue, ErrorMessage = "Debes seleccionar un trabajador.")]
         public int TrabajadorID { get; set; }
         public IEnumerable<SelectListItem> Trabajadores { get; set; }
 
