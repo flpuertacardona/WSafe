@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace WSafe.Web.Data
 {
@@ -31,6 +29,19 @@ namespace WSafe.Web.Data
         public string ControlAdministrativo { get; set; }
         public string ControlSeñalizacion { get; set; }
         public string ControlEPP { get; set; }
+        public ICollection<ImagenActo> ImagenActo { get; set; }
+        public string FirstImage
+        {
+            get
+            {
+                if (ImagenActo == null || ImagenActo.Count == 0)
+                {
+                    return "https://wsafe.azurewebsites.net/Documents/images/noImage.png";
+                }
+
+                return ImagenActo.FirstOrDefault().ImageUrl;
+            }
+        }
 
     }
 }

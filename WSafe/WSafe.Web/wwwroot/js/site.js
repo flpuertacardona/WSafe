@@ -5,6 +5,55 @@
 
 <script>
 
+    function nivelesDeficiencia() {
+        var niveles = [
+            {id: 1, name: "Muy alto (MA)"},
+            {id: 2, name: "Alto (A)"},
+            {id: 3, name: "Medio (M)"},
+            {id: 4, name: "Bajo (B)"}
+        ]
+    }
+
+    function nivelesExposicion() {
+        var niveles = [
+            {id: 1, name: "Continua (EC)"},
+            {id: 2, name: "Frecuente (EF)"},
+            {id: 3, name: "Ocasional (EO)"},
+            {id: 4, name: "Esporadica (EE)"}
+        ]
+    }
+
+    function nivelesProbabilidad(p) {
+        if(p >= 24 && p <= 40) => return "Muy alto (MA)";
+        if(p >= 10 && p <= 20) => return "Alto (A)";
+        if(p >= 6  && p <= 8)  => return "Medio (M)", "Entre 8 y 6";
+        if(p >= 2  && p <= 4)  => return "Bajo (B)";
+    } 
+
+
+    function nivelesConsecuencia() {
+        var niveles = [
+            {id: 1, name: "Mortal catastrófico""},
+            {id: 2, name: "Muy grave"},
+            {id: 3, name: "Grave"},
+            {id: 4, name: "Leve"}
+        ]
+    }
+
+    function nivelesRiesgo(r) {
+        if(r >= 600 && r <= 4000) => return "I";
+        if(r >= 150 && p <= 500)  => return "II";
+        if(p >= 40  && p <= 120)  => return "III";
+        if(p <= 20) => return "IV";
+    }
+
+    function aceptabilidadRiesgo(r) {
+        if(r >= 600 && r <= 4000) => return "No Aceptable";
+        if(r >= 150 && p <= 500)  => return "No Aceptable o Aceptable con control Específico";
+        if(p >= 40  && p <= 120)  => return "Mejorable";
+        if(p <= 20) => return "Aceptable";
+    }
+
     function condicionesInseguras(){
         var condicionInsegura = [
             {id: 1, name: "Orden y limpieza"},
