@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace WSafe.Web.Data
 {
@@ -24,7 +25,20 @@ namespace WSafe.Web.Data
         public string ActoInseguro { get; set; }
         public string CondicionInsegura { get; set; }
         public DateTime FechaNotificacion { get; set; }
-        public ICollection<ImagenActo> Imagenes { get; set; }
+        public ICollection<ImagenActo> ImagenActo { get; set; }
+        public string FirstImage
+        {
+            get
+            {
+                if (ImagenActo == null || ImagenActo.Count == 0)
+                {
+                    return "https://wsafe.azurewebsites.net/Documents/images/noImage.png";
+                }
+
+                return ImagenActo.FirstOrDefault().ImageUrl;
+            }
+        }
+
         public string FactoresPersonales { get; set; }
         public string FactoresTrabajo { get; set; }
         public string Recomendaciones { get; set; }

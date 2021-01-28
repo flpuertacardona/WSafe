@@ -12,7 +12,7 @@ namespace WSafe.Web.Data
         public DateTime Fecha{ get; set; }
         public string EstadoIntervencion { get; set; }
         public string Observaciobnes { get; set; }
-        public string Responsable { get; set; }
+        public Trabajador Responsable { get; set; }
 
     }
 }

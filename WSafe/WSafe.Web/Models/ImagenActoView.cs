@@ -6,6 +6,7 @@ namespace WSafe.Web.Models
 {
     public class ImagenActoView : ImagenActo
     {
+        [Required]
         [Display(Name = "Image")]
         public IFormFile ImageFile { get; set; }
 
