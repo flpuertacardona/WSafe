@@ -161,8 +161,68 @@
     }
 
     function insBPA() {
+        var antisepticos = [
+            {Titulo: "<b>ANTISEPTICOS</b>",Cant: "", Fecha: "", Verifica: "", Obser: ""},
+            {Titulo: "ALCOHOL ANTISÉPTICO FRASCO POR 275 ml – Unidad", Cant: Cantidad1, Fecha: FechaVencimiento1, Verifica: Item1, Obser: Obs1},
+            {Titulo: "SOLUCIÓN YODADA - Frasco x 120 ml", Cant: Cantidad2, Fecha: FechaVencimiento2, Verifica: Item2, Obser: Obs2}]
+
+        var equipos = [
+            {Titulo: "<b>EQUIPOS</b>", Cant: "", Fecha: "", Verifica: "", Obser: ""},
+            {Titulo: "FONENDOSCOPIO - Unidad", Cant: Cantidad3, Fecha: FechaVencimiento3, Verifica: Item3, Obser: Obs3},
+            {Titulo: "TENSIÓMETRO - Unidad", Cant: Cantidad4, Fecha: FechaVencimiento4, Verifica: Item4, Obser: Obs4}]
+
+        var material = [
+            {Titulo: "<b>MATERIAL DE CURACIÓN</b>", Cant: "", Fecha: "", Verifica: "", Obser: ""},
+            {Titulo: "ALGODÓN - Bolsa", Cant: Cantidad5, Fecha: FechaVencimiento5, Verifica: Item5, Obser: Obs5},
+            {Titulo: "APLICADORES – Paquete", Cant: Cantidad6, Fecha: FechaVencimiento6, Verifica: Item6, Obser: Obs6},
+            {Titulo: "APÓSITO o COMPRESAS NO ESTÉRILES – Unidad", Cant: Cantidad7, Fecha: FechaVencimiento7, Verifica: Item7, Obser: Obs7},
+            {Titulo: "BAJALENGUAS – Paquete x 20", Cant: Cantidad8, Fecha: FechaVencimiento8, Verifica: Item8, Obser: Obs8},
+            {Titulo: "CURAS – Caja", Cant: Cantidad9, Fecha: FechaVencimiento9, Verifica: Item9, Obser: Obs9},
+            {Titulo: "ESPARADRAPO DE TELA ROLLO 4" – Unidad", Cant: Cantidad10, Fecha: FechaVencimiento10, Verifica: Item10, Obser: Obs10},
+            {Titulo: "GASAS ESTÉRILES – Paquete x 3", Cant: Cantidad11, Fecha: FechaVencimiento11, Verifica: Item11, Obser: Obs11},
+            {Titulo: "GASAS LIMPIAS PAQUETE – Paquete x 20", Cant: Cantidad12, Fecha: FechaVencimiento12, Verifica: Item12, Obser: Obs12},
+            {Titulo: "GUANTES DE LÁTEX PARA EXAMEN - Caja por 100", Cant: Cantidad13, Fecha: FechaVencimiento13, Verifica: Item13, Obser: Obs13},
+            {Titulo: "JERINGAS – Unidad", Cant: Cantidad14, Fecha: FechaVencimiento14, Verifica: Item14, Obser: Obs14},
+            {Titulo: "MICROPORE ROLLO – Unidad", Cant: Cantidad15, Fecha: FechaVencimiento15, Verifica: Item15, Obser: Obs15},
+            {Titulo: "SOLUCIÓN SALINA 250 cc o 500 cc – Unidad", Cant: Cantidad16, Fecha: FechaVencimiento16, Verifica: Item16, Obser: Obs16},
+            {Titulo: "TAPABOCAS – Caja X 50", Cant: Cantidad17, Fecha: FechaVencimiento17, Verifica: Item17, Obser: Obs17},
+            {Titulo: "VENDA DE ALGODÒN 3 X 5 YARDAS  – Unidad", Cant: Cantidad18, Fecha: FechaVencimiento18, Verifica: Item18, Obser: Obs18},
+            {Titulo: "VENDA DE ALGODÒN 5 X 5 YARDAS – Unidad", Cant: Cantidad19, Fecha: FechaVencimiento19, Verifica: Item19, Obser: Obs19},
+            {Titulo: "VENDA ELÁSTICA 2 X 5 YARDAS – Unidad", Cant: Cantidad20, Fecha: FechaVencimiento20, Verifica: Item20, Obser: Obs20},
+            {Titulo: "VENDA ELÁSTICA 3 X 5 YARDAS – Unidad", Cant: Cantidad21, Fecha: FechaVencimiento21, Verifica: Item21, Obser: Obs21},
+            {Titulo: "VENDA ELÁSTICA 5 X 5 YARDAS – Unidad", Cant: Cantidad22, Fecha: FechaVencimiento22, Verifica: Item22, Obser: Obs22},
+            {Titulo: "OCLUSOR OCULAR ADULTO – Unidad", Cant: Cantidad23, Fecha: FechaVencimiento23, Verifica: Item23, Obser: Obs23}]
+
+        var medicamentos = [
+            {Titulo: "<b>MEDICAMENTOS</b>", Cant: "", Fecha: "", Verifica: "", Obser: ""},
+            {Titulo: "SULFADIAZINA DE PLATA – Frasco", Cant: Cantidad24, Fecha: FechaVencimiento24, Verifica: Item24, Obser: Obs24}]
+
+        var insumos = [
+            {Titulo: "<b>INSUMOS ADICIONALES</b>", Cant: "", Fecha: "", Verifica: "", Obser: ""},
+            {Titulo: "BOLSAS PLÁSTICAS (ROJAS Y VERDES) – Unidad", Cant: Cantidad25, Fecha: FechaVencimiento25, Verifica: Item25, Obser: Obs25},
+            {Titulo: "GAFAS PROTECTORAS – Unidad", Cant: Cantidad26, Fecha: FechaVencimiento26, Verifica: Item26, Obser: Obs26},
+            {Titulo: "MANUAL DE PRIMEROS AUXILIOS – Unidad", Cant: Cantidad26, Fecha: FechaVencimiento26, Verifica: Item26, Obser: Obs26},
+            {Titulo: "SABANAS DESECHABLES – Unidad", Cant: Cantidad27, Fecha: FechaVencimiento27, Verifica: Item27, Obser: Obs27},
+            {Titulo: "TIJERAS DE TRAUMA – Unidad", Cant: Cantidad28, Fecha: FechaVencimiento28, Verifica: Item28, Obser: Obs28},
+            {Titulo: "VASOS DESECHABLES – Paquete por 25", Cant: Cantidad29, Fecha: FechaVencimiento29, Verifica: Item29, Obser: Obs29}]
+
+        var emergencias = [
+            {Titulo: "<b>ELEMENTOS DE EMERGENCIAS</b>", Cant: "", Fecha: "", Verifica: "", Obser: ""},
+            {Titulo:= " CAMILLA DE ATENCIÓN – Unidad", Cant: Cantidad30, Fecha: FechaVencimiento30, Verifica: Item30, Obser: Obs30},
+            {Titulo: "CAMILLA RIGIDA – Unidad", Cant: Cantidad31, Fecha: FechaVencimiento31, Verifica: Item31, Obser: Obs31},
+            {Titulo: "COLLAR CERVICAL ADULTO – Unidad", Cant: Cantidad32, Fecha: FechaVencimiento32, Verifica: Item32, Obser: Obs32},
+            {Titulo: "ELEMENTO DE BARRERA o MÁSCARA PARA RCP – Unidad", Cant: Cantidad33, Fecha: FechaVencimiento33 Verifica: Item33, Obser: Obs33},
+            {Titulo: "INMOVILIZADORES DE CUELLO – Unidad", Cant: Cantidad34, Fecha: FechaVencimiento34, Verifica: Item34, Obser: Obs34},
+            {Titulo: "INMOVILIZADORES o FÉRULA MIEMBROS INFERIORES (ADULTO) – Unidad", Cant: Cantidad35, Fecha: FechaVencimiento35, Verifica: Item35, Obser: Obs35},
+            {Titulo: "INMOVILIZADORES o FÉRULA MIEMBROS SUPERIORES (ADULTO) – Unidad", Cant: Cantidad36, Fecha: FechaVencimiento36, Verifica: Item36, Obser: Obs36},
+            {Titulo: "LINTERNA – Unidad", Cant: Cantidad37, Fecha: FechaVencimiento37, Verifica: Item37, Obser: Obs37},
+            {Titulo: "PILAS DE REPUESTO – Unidad", Cant: Cantidad38, Fecha: FechaVencimiento38, Verifica: Item38, Obser: Obs38},
+            {Titulo: "PLANOS – Unidad", Cant: Cantidad39, Fecha: FechaVencimiento39, Verifica: Item39, Obser: Obs39},
+            {Titulo: "LISTADO TELÉFONOS DE EMERGENCIA", Cant: Cantidad40, Fecha: FechaVencimiento40, Verifica: Item40, Obser: Obs40}]
 
     }
+
+
     function selecPeligro() {
         var subjectObject = {
             "Fisicos": ["Ruido", "Iluminacion", "Vibración", "Temperaturas Extremas", "Presión atmosferica", "Radiaciones Ionizantes", "Radiaciones No Ionozantes"],
