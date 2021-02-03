@@ -5,6 +5,214 @@
 
 <script>
 
+    function insLocativa() {
+
+        var peligrosFisicos = [
+            {Titulo: "1.1 Existe buena iluminación artificial y natural.", Cumple: Item1, Observa: Obs1},
+            {Titulo: "1.2 Las luminarias están en buen estado.", Cumple: Item2, Observa: Obs2},
+            {Titulo: "1.3 Hay buena ventilación en el área", Cumple: Item3, Observa: Obs3},
+            {Titulo: "1.4 El nivel de ruido es adecuado (Condiciones Normales inferiores a 85 db)", Cumple: Item4, Observa: Obs4},
+            {Titulo:  "1.5 Existen controles de ruido (control en la fuente, en el medio de propagación, en el
+                    trabajador).",Cumple: Item5, Observa: Obs5},
+            {Titulo: "1.6 La temperatura es confortable.", Cumple: Item6, Observa: Obs6}]
+
+
+        var peligrosLocativos = [
+            {Titulo: "2.1 Los muros están en buen estado (Sin grietas, sin humedad, pintura buen estado)", Cumple = Item7, Observa = Obs7},
+            {Titulo: "2.2 Escaleras en buen estado (paso manos, antideslizantes).", Cumple = Item8, Observa = Obs8},
+            {Titulo: "2.3 Pisos en buen estado.",Cumple = Item9, Observa = Obs9},
+            {Titulo: "2.4 Ventanas, puertas en buen estado (manijas, chapas).", Cumple: Item10, Observa: Obs10},
+            {Titulo: "2.5 Techos en buen estado (Sin goteras).", Cumple: Item11, Observa: Obs11},
+            {Titulo: "2.6 Areas de circulación despejadas (escaleras, zonas de transito en almacen, etc)", Cumple: Item12, Observa: Obs12},
+            {Titulo: "2.7 Están claramente demarcadas las áreas de trabajo y rutas de tránsito.", Cumple: Item13, Observa: Obs13},
+            {Titulo: "2.8 En general se observan las sillas en buen estado?",Cumple: Item14, Observa: Obs14},
+            {Titulo: "2.9 Las divisiones modulares, escritorio y cajones se encuentran en buenas condiciones.", Cumple: Item15, Observa: Obs15}]
+
+        var peligrosElectricos = [
+            {Titulo: "3.1 Cables eléctricos debidamente entubados. ", Cumple: Item16, Observa: Obs16},
+            {Titulo: "3.2 Los empalmes o conexiones estan en buen estado", Cumple: Item17, Observa: Obs17},
+            {Titulo: "3.3 Tomas e interruptores en buen estado",Cumple: Item18, Observa: Obs18},
+            {Titulo: "3.4 Se observa cajas o toma corriente sin sobrecarga.", Cumple: Item19, Observa: Obs19},
+            {Titulo: "3.5 Cables en buen estado", Cumple: Item20, Observa: Obs20},
+            {Titulo: "3.6 Los tableros, cajas y circuitos estan identificados", Cumple: Item21, Observa: Obs21},
+            {Titulo: "3.7 Los tableros y cajas estan libres de obstáculos.", Cumple: Item22, Observa: Obs22},
+            {Titulo: "3.8 Existe señalización de peligros.", Cumple: Item23, Observa: Obs23}]
+
+        var peligrosSeguridad = [
+            {Titulo: "4.1 Los extintores son los adecuados al tipo de peligros del área.", Cumple: Item24, Observa: Obs24},
+            {Titulo: "4.2 Extintores de carga vigente.", Cumple: Item25, Observa: Obs25},
+            {Titulo: "4.3 Extintores libre de obstaculos", Cumple: Item26, Observa: Obs26},
+            {Titulo: "4.4 Existe señalización de extintores", Cumple: Item27, Observa: Obs27},
+            {Titulo: "4.5 Existe señalización en todas las instalaciones y en las salidas de emergencia.", Cumple: Item28, Observa: Obs28},
+            {Titulo: "4.6 Las áreas de salida de emergencia y punto de encuentro se encuentran despejadas", Cumple: Item29, Observa: Obs29},
+            {Titulo: "4.7 El personal cuenta con los elementos de protección personal (EPP).", Cumple: Item30, Observa: Obs30},
+            {Titulo: "4.8 Hay camilla en el área. (Solo si es necesaria)", Cumple: Item31, Observa: Obs31},
+            {Titulo: "4.9 Hay botiquín y control de consumo.", Cumple: Item32, Observa: Obs32},
+            {Titulo: "4.10 Se tiene la lista de teléfonos de emergencia a la mano?.", Cumple: Item33, Observa: Obs33},
+            {Titulo: "4.11 Se tiene la lista de centros de salud u hospitales de referencia cercanos?", Cumple: Item34, Observa: Obs34}]
+
+        var peligrosBiologicos = [
+            {Titulo: "5.1 El area esta libre de insectos y roedores.", Cumple: Item35, Observa: Obs35}]
+
+        var peligrosBiomecanico = [
+            {Titulo: "6.1 Espacio de trabajo adecuado (para miembros inferiores, desplazamientos y salidas del puesto de trabajo)
+                ",Cumple: Item36, Observa: Obs36},
+            {Titulo: "6.2 Altura adecuada de la pantalla del computador respecto a la horizontal (el borde superior
+                de la pantalla se encuentra a la misma altura de los ojos del trabajador)
+                ",Cumple: Item37, Observa: Obs37},
+            {Titulo: "6.3 Silla en buenas condiciones, espaldar, asiento, patas o base",Cumple: Item38, Observa: Obs38},
+            {Titulo: "6.4 El peso de los objetos que levanta o almacena están dentro de los límites permisibles", Cumple: Item39, Observa: Obs39}]
+
+        varOrdenAseo = [
+            {Titulo: "7.1 El área se encuentra organizada.", Cumple: Item40, Observa: Obs40},
+            {Titulo: "7.2 Se realiza la clasificación de residuos sólidos en forma correcta.", Cumple: Item41, Observa: Obs41},
+            {Titulo: "7.3 Los residuos peligrosos se separan y disponen con empresas autorizadas", Cumple: Item42, Observa: Obs42},
+            {Titulo: "7.4 El sitio inspeccionado se encuentra en buen estado de aseo y mantenimiento", Cumple: Item43, Observa: Obs43}]
+
+        var saneamiento = [
+            {Titulo: "8.1 Servicios higiénicos en buen estado y limpieza.", Cumple: Item44, Observa: Obs44},
+            {Titulo: "8.2 Luminarias de baños en buen estado", Cumple: Item45, Observa: Obs45},
+            {Titulo: "8.3 Hay papel higiénico, jabón, toallas y papeleras con pedal y tapa.", Cumple: Item46, Observa: Obs46},
+            {Titulo: "8.4 Estan los inodoros limpios en buen estado.", Cumple: Item47, Observa: Obs47},
+            {Titulo: "8.5 Se tienen reguladores o ahorradores de agua en los lavamanos y sanitarios", Cumple: Item48, Observa: Obs48}]
+
+        var peligrosMecanico = [
+             {Titulo: "9.1 Equipos y herramientas de oficina en buen estado", Cumple: Item49, Observa: Obs49},
+             {Titulo: "9.2 Archivo rodante en buen estado",Cumple: Item50, Observa: Obs50}]
+
+        var observacionTareas = [
+            {Titulo: "10.1 Los funcionarios cumplen con las normas de seguridad de su actividad.", Cumple: Item51, Observa: Obs51},
+            {Titulo: "10.2 Los funcionarios conocen los peligros a los que están expuestos.",Cumple: Item52, Observa: Obs52},
+            {Titulo: "10.3 El personal tiene claro que hacer en caso de un incidente , Accidentes de trabajo y Enfermedad Laboral.",Cumple: Item53, Observa: Obs53},
+            {Titulo: "10.4 Los funcionarios conocen la Politica de Seguridad y Salud en el Trabajo.", Cumple: Item54, Observa: Obs54},
+            {Titulo: "10.5 Los funcionarios saben como usar y cuidar sus EPP.", Cumple: Item55, Observa: Obs55}]
+
+        var medioAmbiente = [
+            {Titulo: "11.1 Agua y Energía", Cumple: "", Observa: ""},
+            {Titulo: "- Horno microondas. (Si aplica)", Cumple: Item1, Observa: Obs1},
+            {Titulo: "- Nevera. (Si aplica)", Cumple: Item2, Observa: Obs2},
+            {Titulo: "- Cafetera. (Si aplica)", Cumple: Item3, Observa: Obs3},
+            {Titulo: "- Aire Acondicionado. (Si aplica)", Cumple: Item4, Observa: Obs4},
+            {Titulo: "- Impresora / fotocopiadora. (Si aplica)", Cumple: Item5, Observa: Obs5},
+            {Titulo: "- Computador. (Si aplica)",Cumple: Item6, Observa: Obs6},
+            {Titulo: "- Otro", Cumple: Item7, Observa: Obs7},
+            {Titulo: "11.2 Sustanacias Quimicas", Cumple: "", Observa: ""},
+            {Titulo: "- El area cuenta con las tarjetas de emergencia", Cumple: Item8, Observa: Obs8},
+            {Titulo: "- El area cuenta con las Hojas de seguridad", Cumple: Item9, Observa: Obs9},
+            {Titulo: "- Otro", Cumple: Item10, Observa: Obs10}]
+
+    }
+
+    function insHerramientas() {
+        var herramientasManuales = [
+            {Titulo: "<b>A HERRAMIENTAS MANUALES</b>", Estado: ""},
+            {Titulo: "1 Se usa la adecuada al trabajo", Estado: "Item1"},
+            {Titulo: "2 Se encuentran en buen estado", Estado: "Item2"},
+            {Titulo: "3 Se guardan y portan adecuadamente", Estado: "Item3"},
+            {Titulo: "4 Los mangos de madera no presentan astillas, ni fisuras y están firmemente adheridos. ", Estado: "Item4"}]
+
+        var herramientasCorte = [
+             {Titulo: "<b>B HERRAMIENTAS DE CORTE</b>", Estado: ""},
+             {Titulo: "1 Los cinceles no presentan su cabeza tipo hongo", Estado: Item5},
+             {Titulo: "2 Los cinceles se encuentran afilados", Estado: Item6},
+             {Titulo: "3 Las seguetas están correctamente instaladas y no presentan defectos", Estado: Item7},
+             {Titulo: "4 Las limas disponen de sus mangos y no están rotas o sucias", Estado: Item8},
+             {Titulo: "5 Los serruchos disponen de empuñadura y sus dientes están completos", Estado: Item9},
+             {Titulo: "6 Los cuchillos disponen de mangos y fundas", Estado: Item10}]
+
+        var herramientasGolpe = [
+             {Titulo: "<b>C HERRAMIENTAS DE GOLPE</b>", Estado: ""},
+             {Titulo: "1 Se emplea el martillo adecuado según la labor ", Estado: Item11},
+             {Titulo: "2 Sus caras y bordes están en buen estado", Estado: Item12},
+             {Titulo: "3 Su mango no está quebrado, astillado ni flojo", Estado: Item13}
+            ]
+
+        var herramientasTorsion = [
+            {Titulo: "<b>D HERRAMIENTAS DE TORSION - LLAVES</b>", Estado: ""},
+            {Titulo: "1 Cuentan con llaves de pulgadas y milimétricas", Estado: Item14},
+            {Titulo: "2 Se observan en la llave huellas y palancas", Estado: Item15},
+            {Titulo: "3 Se dispone de llaves para golpear", Estado: Item16},
+            {Titulo: "4 Las llaves no presentan sus mordazas abiertas o deterioradas", Estado: Item17},
+            {Titulo: "5 La herramienta para electricista cuenta con el aislamiento adecuado y son probadas frecuentemente", Estado: Item18},
+            {Titulo: "6 La punta y cabo de los destornilladores se encuentran en buen estado", Estado: Item19},
+            {Titulo: "7 Se dispone de herramientas que no produzcan chispas.", Estado: Item20}]
+
+        var herramientasElecrtricas = [
+             {Titulo: "<b>E HERRAMIENTAS ELCTRICAS</b>", Estado :""},
+             {Titulo: "1  Las herramientas según Las adecuadas según el riesgo (humedad, vapores)", Estado: Item21},
+             {Titulo: "2 Se emplean los elementos de protección personal de acuerdo con la herramienta empleada", Estado: Item22},
+             {Titulo: "3 Están limpia y lubricadas", Estado: Item23},
+             {Titulo: "4 Tienen sus guardas", Estado: Item24},
+             {Titulo: "5 Posee aislamiento doble o conexión a tierra por enchufe de tres patas", Estado: Item25},
+             {Titulo: "6 El cable y enchufe no presentan daños", Estado: Item26},
+             {Titulo: "7 En los taladros se observa el mandil con golpes", Estado: Item2"},
+             {Titulo: "8 Brocas sin filo o se ha reducido su diámetro para taladros pequeños", Estado: Item28},
+             {Titulo: "9 Los esmeriles cuentan con guardas y los soportes de los discos o piedras son los adecuados", Estado: Item29},
+             {Titulo: "10 Se observa deterioro en las roscas o tornillo en las ruedas abrasivas.", Estado: Item30},
+             {Titulo: "11 Se almacenan las pulidoras y discos en sitios donde puedan ser golpeados", Estado: "Item31"}]
+
+        var herramientasNauticas = [
+            {Titulo: "<b>F HERRAMIENTAS NEUMATICAS</b>", Estado: ""},
+            {Titulo: "1 Las mangueras y acoples se encuentran en buen estado", Estado: Item32},
+            {Titulo: "2 Se emplean elementos de protección personal de acuerdo con la herramienta", Estado: Item33},
+            {Titulo: "3 Se trabaja a las presiones indicadas", Estado: Item34},
+            {Titulo: "4 La herramienta es descargada al terminar", Estado: Item35}]
+
+    }
+
+    function insBPA() {
+
+    }
+    function selecPeligro() {
+        var subjectObject = {
+            "Fisicos": ["Ruido", "Iluminacion", "Vibración", "Temperaturas Extremas", "Presión atmosferica", "Radiaciones Ionizantes", "Radiaciones No Ionozantes"],
+            "Quimicos": ["Polvos orgánicos, inorgánicos", "Fibras", "Liquidos", "Gases y vapores", "Humos metálicos, no metálicos", "Material particulado"],
+            "Biologicos": ["Virus", "Bacterias", "Hongos", "Ricketsias", "Parasitos", "Picaduras", "Mordeduras", "Fluidos o escrementos"],
+            "Ergonomicos": ["Postura", "Esfuerzo", "Movimiento repetitivo", "Manipulación manual de cargas"],
+            "Psicosocial": ["Gestión organizacional", "Caracteristicas de la organización del trabajo", "Caracteristicas del grupo social del trabajo", "Condiciones de la tarea", "Interfase persona – tarea", "Jornada de	trabajo"],
+            "Condiciones seguridad": ["Mecánico", "Eléctrico", "Locativo", "Tecnológico", "Accidentes de tránsito",	"Públicos", "Trabajo en alturas", "Espacios confinados"],
+            "Desatres Naturales": ["Sismo", "Terremoto", "Vendaval", "Inundación", "Derrumbe", "Precipitaciones"]
+        }
+
+        window.onload = function() {
+          var subjectSel = document.getElementById("subject");
+          var topicSel = document.getElementById("topic");
+          for (var x in subjectObject) {
+                subjectSel.options[subjectSel.options.length] = new Option(x, x);
+          }
+
+        subjectSel.onchange = function() {
+                //empty Chapters dropdown
+                topicSel.length = 1;
+            //display correct values
+            var z = subjectObject[this.value];
+            for (var i = 0; i < z.length; {
+                topicSel.options[topicSel.options.length] = new Option(z[i], z[i]);
+            }
+        }
+    }
+
+    function myFunction() {
+      var x = document.forms["frm1"];
+      var text = "";
+      var i;
+      for (i = 0; i < x.length ; {
+            text += x.elements[i].value + "<br>";
+        }
+         document.getElementById("demo").innerHTML = text;
+    }
+
+
+    function categoriaCumple(){
+        var cumplimiento = [
+            {id: 1, name: "Cumple"},
+            {id: 2, name: "No cumple"},
+            {id: 3, name: "NA"}
+        ]
+
+    }
+
+
     function nivelesDeficiencia() {
         var niveles = [
             {id: 1, name: "Muy alto (MA)"},
