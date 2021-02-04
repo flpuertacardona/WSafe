@@ -5,8 +5,72 @@
 
 <script>
 
-    function insLocativa() {
+    function insExtintor() {
+        var exConcepto1 = [
+            {Concepto: "El extintor está ubicado en el lugar Preestablecido", Estado: Extintor.Cumple1},
+            {Concepto: "El extintor no presenta obstáculos para su acceso", Estado: Extintor.Cumple2},
+            {Concepto: "El extintor está completamente cargado y operable", Estado: Extintor.Cumple3},
+            {Concepto: "Las calcomanías y las placas de instrucción están legibles y en el frente del extintor (Tipo/Fecha)", Estado: Extintor.Cumple4},
+            {Concepto: "El gabinete o gancho está ubicado a una altura no mayor a 1,5 mt.", Estado: Extintor.Cumple5},
+            {Concepto: "La base del extintor está al menos a 10 cm de altura sobre el nivel del piso", Estado: Extintor.Cumple6},
+            {Concepto: "El extintor tiene el sello de seguridad", Estado: Extintor.Cumple7},
+            {Concepto: "El extintor tienen el pasador o pin de seguridad", Estado: Extintor.Cumple8}]
 
+        var exConcepto2 = [
+            {Concepto: "La pintura del cilindro está en buen estado", Estado: Extintor.Cumple9},
+            {Concepto: "El cilindro está en buen estado, sin oxidación, roturas, abolladuras, golpes o deformaciones", Estado: Extintor.Cumple10},
+            {Concepto: "La manguera del extintor está en buen estado,sin roturas, poros, agrietamientos u obstrucciones con papel, animales, entre otros", Estado: Extintor.Cumple11},
+            {Concepto: "Los empalmes de la manguera a la válvula y a la corneta o boquilla están bien", Estado: Extintor.Cumple12},
+            {Concepto: "La Corneta en los extintores de CO2 no presenta fisuras, cristalización y defectos en acoples", Estado: Extintor.Cumple13},
+            {Concepto: "La válvula no presenta oxidación, daños en la manija, deformaciones que impidan su funcionamiento ", Estado: Extintor.Cumple14},
+            {Concepto: "La lectura de presión está dentro del rango operable ", Estado: Extintor.Cumple15}]
+
+        var observaiones = [
+            {Concepto: "Clase", Clase: Extintor.Clase},
+            {Concepto: "Observaciones", Obs: Extintor.Observaciones},
+            {Concepto: "Acciones de mejora", Acc: Extintor.Acciones},
+            {Concepto: "Responsable", Res: Extintor.Responsable},
+            {Concepto: "Seguimiento", Seg: Extintor.Seguimiento},
+            {Concepto: "Cierre", Cierre: Extintor.Cierre},
+            {Concepto: "Fecha vencimiento", Fecha: Extintor.FechaVence}]
+
+    }
+
+    function insEPP() {
+        var eppEntregados = [
+            {Nombre: "Nombre EPP", epp: EPPEntregado.EPPDebeUsar.Nombre},
+            {Nombre: "Usa el EPP", usa: EPPEntregado.EPPDebeUsar.Usa},
+            {Nombre: "Estado del EPP", estado: EPPEntregado.EPPDebeUsar.Estado},
+            {Nombre: "Porque no lo usa", nousa: EPPEntregado.EPPDebeUsar.NoUsa},
+            {Nombre: "Medidas de control", nousa: EPPEntregado.EPPDebeUsar.Medidas}]
+    
+    var eppFaltantes = [
+            {Nombre: "Nombre EPP", epp: EPPFaltante.FaltanteTrabajador.Nombre},
+            {Nombre: "Cantidad", cant: EPPFaltante.FaltanteTrabajador.Usa}]
+
+        var eppTrabajador = [
+            {Nombre: "Trabajador", trabajador: Trabajador.Nombre},
+            {Nombre: "Cantidad", cargo: Trabajador.Cargo}]
+
+    }
+
+    function verificaEmergencia() {
+        var sistemaSeguridad = [
+            {System: "Alarmas Sirenas", Manten: System1.SystemVerificacion.Mantenimiento, respon: System1.SystemVerificacion.Nombres, observa: System1.SystemVerificacion.Observaciones},
+            {System: "Detectores de humo", Manten: System2.SystemVerificacion.Mantenimiento, respon: System2.SystemVerificacion.Nombres, observa: System2.SystemVerificacion.Observaciones},
+            {System: "Escaleras y barandales", Manten: System3.SystemVerificacion.Mantenimiento, respon: System3.SystemVerificacion.Nombres, observa: System3.SystemVerificacion.Observaciones},
+            {System: "Puertas de Emergencia", Manten: System4.SystemVerificacion.Mantenimiento, respon: System4.SystemVerificacion.Nombres, observa: System4.SystemVerificacion.Observaciones},
+            {System: "Pulsadores Manuales contra incendio", Manten: System5.SystemVerificacion.Mantenimiento, respon: System5.SystemVerificacion.Nombres, observa: System5.SystemVerificacion.Observaciones},
+            {System: "Señalización preventiva e informativa de Emergencia", Manten: System6.SystemVerificacion.Mantenimiento, respon = System6.SystemVerificacion.Nombres, observa: System6.SystemVerificacion.Observaciones },
+            {System: "Sistema de iluminación de emergencia", Manten: System7.SystemVerificacion.Mantenimiento, respon: System7.SystemVerificacion.Nombres, observa: System7.SystemVerificacion.Observaciones},
+            {System: "Sistema eléctrico", Manten: System8.SystemVerificacion.Mantenimiento, respon: System8.SystemVerificacion.Nombres, observa: System8.SystemVerificacion.Observaciones},
+            {System: "Sistema Hidráulico", Manten: System9.SystemVerificacion.Mantenimiento, respon: System9.SystemVerificacion.Nombres, observa: System9.SystemVerificacion.Observaciones},
+            {System: "Sistemas de comunicación interna", Manten = System10.SystemVerificacion.Mantenimiento, respon: System10.SystemVerificacion.Nombres, observa: System10.SystemVerificacion.Observaciones},
+            {System: "Sistemas de Sanitarios y aguas lluvias", Manten: System11.SystemVerificacion.Mantenimiento, respon: System11.SystemVerificacion.Nombres, observa: System11.SystemVerificacion.Observaciones}]
+
+    }
+
+    function insLocativa() {
         var peligrosFisicos = [
             {Titulo: "1.1 Existe buena iluminación artificial y natural.", Cumple: Item1, Observa: Obs1},
             {Titulo: "1.2 Las luminarias están en buen estado.", Cumple: Item2, Observa: Obs2},
